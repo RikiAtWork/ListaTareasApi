@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <title>Administrador de Tareas</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor-form">
+            <div class="formulario">
+                <h1>Lista de tareas</h1><br><br>
+
+                <label for="nombreTarea">Nombre de la tarea</label>
+                <input type="text" id="nombreTarea"><br>
+
+                <label for="nombreTarea">Descripción de la tarea</label>
+                <input type="text" id="descripcion"><br>
+
+                <label for="nombreTarea">Tiempo estimado de trabajo</label>
+                <input type="number" id="tiempo"><br>
+
+                <label for="nombreTarea">Fecha máxima de finalización</label>
+                <input type="date" id="fechaMax" required><br>
+
+                <label for="fechaAlta">Fecha de alta de la tarea</label>
+                <input type="date" id="fechaAlta" required><br>
+
+                <label for="estado">Estado</label>
+                <select name="estado" id="estados">
+                    <option value="En progreso">En progreso</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Finalizado">Finalizado</option>
+                </select><br>
+
+                <button class="btTarea" id="añadir">
+                    <span class="text">Añadir tarea</span>
+                  </button>
+            </div>
+        </div>
+        <div class="contador" id="contadores">
+
+        </div>
+        <div class="listado" id="listado">
+            <table>
+                <thead id="lista-tabla">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tiempo estimado
+                            <button id="ordenarPorTiempo"><i class="fi fi-br-angle-up"></i></button>
+                        </th>
+                        <th>Fecha máx. finalización</th>
+                        <th>Fecha Alta
+                            <button id="ordenarPorFecha"><i class="fi fi-br-angle-up"></i></button>
+                        </th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="lista-tareas">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

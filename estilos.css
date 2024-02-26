@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./background.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Onest', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.contenedor-form{
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    background: rgba(82, 82, 82, 0.336);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0px 8px 32px 0 rgba(0, 0, 0, 0.63);
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: white;
+}
+
+.formulario h1 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.formulario label,
+.formulario input,
+.formulario select {
+    display: block;
+    width: 100%;
+    margin: 5px;
+}
+
+.formulario input:focus, .formulario select:focus{
+    background-color: #0e161a;
+    color: white;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba(249,249,255,0.1);
+    transition: all .2s ease-in-out;
+}
+
+.btTarea {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    margin: 5px;
+}
+
+.btTarea:active,
+.btTarea:hover {
+    outline: 0;
+}
+
+.btTarea span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.btTarea:hover span {
+    background: none;
+}
+
+.btTarea:active {
+    transform: scale(0.9);
+}
+
+.contador{
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contador-estilo{
+    background-color: #361382;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 0 5px 2px grey;
+}
+
+.listado {
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px;
+    box-shadow: 0px 0px 20px #11191d;
+    border: 10px;
+}
+
+thead{
+    background-image: linear-gradient(318deg, #0074D9 0%, #712fff 100%);
+    color: white;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.18);
+    text-align: center;
+    font-weight: 600;
+}
+
+select{
+    border: none;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    font-weight: 600;
+}
+
+p{
+    background-color: #361382;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cambiarEstado{
+    color: #047feb;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+.cambiarEstado:hover{
+    color:#055294;
+}
+
+#lista-tareas tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.705);
+    backdrop-filter: blur(10px);
+}
+
+#lista-tareas tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.863);
+    backdrop-filter: blur(10px);
+
+}
+
+.eliminarTarea {
+    color: red;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+.eliminarTarea:hover {
+    color: rgb(146, 0, 0);
+}
+
+.botones-ordenar {
+    grid-row: 2;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+#ordenarPorTiempo,
+#ordenarPorFecha {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    color: #fff; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer; 
+    margin-left: 5px; 
+}
+
+#ordenarPorTiempo:hover, #ordenarPorFecha:hover {
+    background-color: #2980b9;
+}
+
+
